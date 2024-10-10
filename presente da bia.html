@@ -1,0 +1,104 @@
+<!--
+
+                            Online HTML Compiler.
+                Code, Compile, Run and Debug HTML program online.
+Write your code in this editor and press "Run" button to execute it.
+
+-->
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu Te Amo Bia</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 89vh;
+            font-family: 'Brush Script MT', cursive; /* Define a fonte para o corpo */
+            text-align: center;
+            background-color: #ffcccb; /* Fundo rosa claro */
+            position: relative;
+            overflow: hidden;
+        }
+        .centralizado {
+            font-size: 30px;
+            color: red; /* Frase central em vermelho */
+            position: absolute;
+            z-index: 2; /* Para ficar na frente das outras */
+        }
+        .outras {
+            font-size: 24px;
+            color: pink; /* Outras frases em rosa */
+            position: absolute;
+            z-index: 1; /* Abaixo da frase central */
+        }
+        .centralizado a {
+            color: red; /* Define a cor do texto do link como vermelho */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+        .segundaParte {
+            background-color: #ffcccb; /* Fundo rosa claro */
+            text-align: center;
+            font-family: 'Brush Script MT', cursive; /* Define a fonte para a segunda parte */
+            padding: 20px; /* Adiciona um espaçamento para melhor visualização */
+            z-index: 3; /* Define o z-index para a segunda parte */
+            color: red; /* Define a cor do texto da segunda parte como vermelho */
+            display: none; /* Inicialmente esconde a segunda parte */
+            white-space: pre-wrap; /* Impede o texto de quebrar em novas linhas */
+            font-size: 10px; /* Diminui o tamanho da fonte */
+        }
+        .segundaParte h1 {
+            display: flex; /* Define o h1 como flexbox */
+            justify-content: center; /* Centraliza o texto dentro do h1 */
+            align-items: center; /* Alinha o texto e o botão verticalmente */
+        }
+    </style>
+</head>
+<body>
+    <div class="centralizado" id="primeiraParte">
+        <a href="#" onclick="irParaSegundaParte()">EU TE AMO BIA E SEMPRE VOU TE AMAR NAO IMPORTA OQUE ACONTEÇA SEMPRE ESTAREI DO SEU LADO</a> 
+    </div>
+    
+    <!-- Frases "eu te amo" preenchendo a página de cima para baixo -->
+    <script>
+        for (let i = 1; i <= 100; i++) {
+            const leftPosition = Math.random() * 100; // Posição aleatória em % para a esquerda
+            document.write(`<div class="outras" style="top: ${i}%; left: ${leftPosition}%; transform: translate(-50%, -50%);">eu te amo</div>`);
+        }
+
+        function irParaSegundaParte() {
+            document.querySelector('#primeiraParte').style.display = 'none'; // Esconde a primeira parte
+            document.querySelector('.segundaParte').style.display = 'block'; // Mostra a segunda parte
+        }
+    </script>
+
+    <div class="segundaParte">
+        <h1>Bia,
+
+Meu coração tá cheio de coisas pra te falar, 
+mas as palavras parecem não ser suficientes 
+pra explicar tudo o que sinto.
+
+Desde que te conheci, minha vida ganhou 
+um brilho diferente. Seu sorriso é a coisa 
+mais linda que já vi, e quando você ri, 
+meu mundo fica mais alegre. Adoro seu jeito 
+fofo e meigo, e seu cabelo, nossa, é 
+simplesmente perfeito!
+
+Adoro ouvir sua voz, é como uma música 
+que me acalma e me faz feliz. Você é tão 
+carinhosa e me faz sentir especial, como se 
+eu fosse a única pessoa no mundo.
+
+Quero estar ao seu lado, te fazer sorrir, 
+te dar muitos abraços e te mostrar o quanto 
+você é importante pra mim. Poder amar você 
+me faz tão bem, Bia. Você é a pessoa mais 
+incrível que eu conheço. Te amo muito! </h1>
+    </div>
+</body>
+</html>
